@@ -22,7 +22,7 @@ References:
 
 ---------------------------------------------
 
-Generated link: 
+Burp scanner finds this vulnerability:
 
 
 
