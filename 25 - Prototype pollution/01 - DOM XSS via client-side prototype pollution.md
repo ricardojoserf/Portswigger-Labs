@@ -45,14 +45,14 @@ File /resources/js/searchLogger.js. This one is interesting for the “transport
 ![img](images/DOM%20XSS%20via%20client-side%20prototype%20pollution/4.png)
 
 
-We can search “/?__proto__[foo]=bar” and find there is a pollution:
+We can search “/?\_\_proto\_\_[foo]=bar” and find there is a pollution:
 
 
 
 ![img](images/DOM%20XSS%20via%20client-side%20prototype%20pollution/5.png)
 
 
-If we add the “transport_url” element from logger.js in a request to “/?__proto__[transport_url]=bar”, there is a request to “/bar”:
+If we add the “transport_url” element from logger.js in a request to “/?\_\_proto\_\_[transport_url]=bar”, there is a request to “/bar”:
 
 
 
@@ -61,14 +61,14 @@ If we add the “transport_url” element from logger.js in a request to “/?__
 ![img](images/DOM%20XSS%20via%20client-side%20prototype%20pollution/6.png)
 ![img](images/DOM%20XSS%20via%20client-side%20prototype%20pollution/7.png)
 
-A payload like “/?__proto__[transport_url]="><script>alert(1)</script><x a="” does not work:
+A payload like “/?\_\_proto\_\_[transport_url]="><script>alert(1)</script><x a="” does not work:
 
 
 
 ![img](images/DOM%20XSS%20via%20client-side%20prototype%20pollution/8.png)
 
 
-If we search “/?__proto__[transport_url]=data:,alert(1);”:
+If we search “/?\_\_proto\_\_[transport_url]=data:,alert(1);”:
 
 
 
