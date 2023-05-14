@@ -69,7 +69,7 @@ So we will change it to print the page:
 /product?productId=1&a=b'><script>print()</script><a href='
 ```
 
-I used this ifram and had to send it twice:
+I used this iframe and had to send it twice:
 
 ```
 <head>
