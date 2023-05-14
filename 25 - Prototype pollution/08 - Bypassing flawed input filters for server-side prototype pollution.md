@@ -63,7 +63,7 @@ File “/resources/js/updateAddress.js”:
 
 
 
-We can change most values but not “isAdmin”. From the notes, "an attacker can access the prototype via the constructor property instead of __proto__"
+We can change most values but not “isAdmin”. From the notes, "an attacker can access the prototype via the constructor property instead of \_\_proto\_\_"
 
 ```
 POST /my-account/change-address HTTP/2
