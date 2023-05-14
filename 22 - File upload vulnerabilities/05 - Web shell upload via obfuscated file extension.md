@@ -20,7 +20,7 @@ References:
 
 ---------------------------------------------
 
-It is not possible to upoad PHP files:
+It is not possible to upload PHP files:
 
 
 
