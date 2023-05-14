@@ -39,14 +39,14 @@ This is the file “/resources/js/searchLoggerAlternative.js”:
 ![img](images/DOM%20XSS%20via%20an%20alternative%20prototype%20pollution%20vector/3.png)
 
 
-When accessing “/?search=aaa&__proto__.foo=bar”, Object.prototype has the field “foo”:
+When accessing “/?search=aaa&\_\_proto\_\_.foo=bar”, Object.prototype has the field “foo”:
 
 
 
 ![img](images/DOM%20XSS%20via%20an%20alternative%20prototype%20pollution%20vector/4.png)
 
 
-We can change it to “sequence” searching “/?search=aaa&__proto__.sequence=bar”. There is a problem in the eval() function stating “bar1 does not exist”:
+We can change it to “sequence” searching “/?search=aaa&\_\_proto\_\_.sequence=bar”. There is a problem in the eval() function stating “bar1 does not exist”:
 
 
 
@@ -62,7 +62,7 @@ manager.sequence = a + 1;
 eval('if(manager && manager.sequence){ manager.macro('+manager.sequence+') }');
 ``` 
 
-It is necessary to add “-”, the request is "/?search=aaa&__proto__.sequence=alert(1)-":
+It is necessary to add “-”, the request is "/?search=aaa&\_\_proto\_\_.sequence=alert(1)-":
 
 
 
