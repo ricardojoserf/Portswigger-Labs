@@ -22,7 +22,7 @@ References:
 
 ---------------------------------------------
 
-In “KWT Editor Keys”, generat a RSA key:
+In “JWT Editor Keys”, generate a RSA key:
 
 
 
