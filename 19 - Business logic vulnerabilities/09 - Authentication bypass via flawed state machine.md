@@ -48,7 +48,7 @@ After logging in, change the “Location” header in the response to redirect t
 ![img](images/Authentication%20bypass%20via%20flawed%20state%20machine/6.png)
 
 
-This change the login to the “administrator” user and it is possible to delete the user:
+This changes the login to the “administrator” user and it is possible to delete the user:
 
 
 
