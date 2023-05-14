@@ -1,9 +1,15 @@
 
 # Portswigger-Labs
 
-All Apprentice and Practitioner-level Portswigger labs. In this README file you can find the final payloads, the writeups are in Markdown files in the folders. 
+All Apprentice and Practitioner-level Portswigger labs. 
 
-## 01 - SQL Injection
+In this README file you can find the final payloads, each detailed writeup is in the Markdown files. 
+
+1. [01 - SQL Injection](#1)
+2. [02 - Cross-Site Scripting](#2)
+
+
+## <a name="1"></a>01 - SQL Injection
 
 #### SQLI.01 - SQL injection vulnerability in WHERE clause allowing retrieval of hidden data
 
@@ -142,7 +148,7 @@ SELECT CASE WHEN (substring((SELECT password FROM users where username = 'admini
 ```
 
 
-## 02 - Cross-Site Scripting
+## <a name="2"></a>02 - Cross-Site Scripting
 
 #### XSS.01 - Reflected XSS into HTML context with nothing encoded
 
