@@ -1,7 +1,7 @@
 
 # Portswigger Labs Writeups
 
-All Apprentice and Practitioner-level Portswigger labs, each detailed writeup is in the Markdown files.
+All Apprentice and Practitioner-level [Portswigger labs](https://portswigger.net/web-security/all-labs), each detailed writeup is in the Markdown files.
 
 In this README.md file you can find the final payloads for each section, and a final section regarding the vulnerability type for each step of the exam:
 
